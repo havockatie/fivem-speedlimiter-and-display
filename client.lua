@@ -49,7 +49,7 @@ Citizen.CreateThread(function()
                         speedlimit = Config.SpeedLimits[street]
                         DisplayLimit(speedlimit)
                     else
-                        speedlimit = "30"
+                        speedlimit = "50"
                         DisplayLimit(speedlimit)
                     end
                     
@@ -63,9 +63,10 @@ Citizen.CreateThread(function()
 end)
 
 function SendAlert(msg) 
-	SetNotificationTextEntry('STRING')
-	AddTextComponentString(msg)
-	DrawNotification(true, false)
+	-- SetNotificationTextEntry('STRING')
+	-- AddTextComponentString(msg)
+	-- DrawNotification(true, false)
+    exports['mb_notify']:sendNotification(msg, {duration=5000, type="info", vertical="top", horizontal="center", variant="standard"})
 end
 
 function table.find(tbl, search)
