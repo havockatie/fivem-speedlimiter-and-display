@@ -36,8 +36,8 @@ Config.disabledVehicles = {
 }
 
 -- Alerts that pop up when auto speed limiting is enabled/disabled
-Config.enabledAlert = "You have ~g~ENABLED~w~ automatic speed limits"
-Config.disabledAlert = "You have ~r~DISABLED~w~ automatic speed limits"
+Config.enabledAlert = "Cruise control ON"
+Config.disabledAlert = "Cruise control OFF"
 
 Config.HUDPosition = {
     ["x"] = 0.0240,
